@@ -1,7 +1,7 @@
 package com.example.databasemysql.repository
 
 import com.example.databasemysql.model.Mahasiswa
-import com.example.databasemysql.service.MahasiswaService
+import com.example.databasemysql.service_api.MahasiswaService
 import java.io.IOException
 
 interface MahasiswaRepository {
@@ -20,7 +20,7 @@ class NetworkMahasiswaRepository(
     }
 
     override suspend fun updateMahasiswa(nim: String, mahasiswa: Mahasiswa) {
-        mahasiswaApiService.updateMahasiswa(nim, mahasiswa)009
+        mahasiswaApiService.updateMahasiswa(nim, mahasiswa)
     }
 
     override suspend fun deleteMahasiswa(nim: String) {
@@ -37,6 +37,7 @@ class NetworkMahasiswaRepository(
             throw e
         }
     }
+
 
 
     override suspend fun getMahasiswa(): List<Mahasiswa> = mahasiswaApiService.getMahasiswa()

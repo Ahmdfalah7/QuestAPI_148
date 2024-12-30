@@ -1,4 +1,4 @@
-package com.example.databasemysql.service
+package com.example.databasemysql.service_api
 
 import com.example.databasemysql.model.Mahasiswa
 import retrofit2.Response
